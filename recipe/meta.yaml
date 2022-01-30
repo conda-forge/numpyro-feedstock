@@ -21,6 +21,8 @@ requirements:
   run:
     - jax >=0.2
     - jaxlib >=0.1.55
+    - multipledispatch
+    - numpy
     - python >=3.6
     - tqdm
 
@@ -34,7 +36,7 @@ about:
   license_family: Apache
   license_file: LICENSE.md
   summary: Pyro PPL on NumPy
-  doc_url: http://num.pyro.ai/en/stable/
+  doc_url: https://num.pyro.ai/en/stable/
 
 extra:
   recipe-maintainers:
