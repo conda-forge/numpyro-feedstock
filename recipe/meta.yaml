@@ -1,5 +1,5 @@
 {% set name = "numpyro" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: numpyro
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2bee826da603236d6c0d60f657c68e61152dcf0528acf2c6db24f3a33b835eb8
+  sha256: 359324fca91b7a21df9b19ccf1b829f338ab18a73196a69d8a74efca3d176daa
 
 build:
   noarch: python
@@ -21,6 +21,8 @@ requirements:
   run:
     - jax >=0.2
     - jaxlib >=0.1.55
+    - multipledispatch
+    - numpy
     - python >=3.6
     - tqdm
 
@@ -34,7 +36,7 @@ about:
   license_family: Apache
   license_file: LICENSE.md
   summary: Pyro PPL on NumPy
-  doc_url: http://num.pyro.ai/en/stable/
+  doc_url: https://num.pyro.ai/en/stable/
 
 extra:
   recipe-maintainers:
