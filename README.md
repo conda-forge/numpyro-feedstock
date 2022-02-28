@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/numpyro-feedsto
 
 Summary: Pyro PPL on NumPy
 
-Documentation: http://num.pyro.ai/en/stable/
+Documentation: https://num.pyro.ai/en/stable/
 
 Current build status
 ====================
