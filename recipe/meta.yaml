@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools
   run:
     - jax >=0.4.14
     - jaxlib >=0.4.14
