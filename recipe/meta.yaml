@@ -11,12 +11,12 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install .
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
@@ -24,10 +24,12 @@ requirements:
     - jaxlib >=0.4.14
     - multipledispatch
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - tqdm
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - numpyro
 
