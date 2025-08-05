@@ -26,6 +26,7 @@ requirements:
     - numpy
     - python >={{ python_min }}
     - tqdm
+    - typing_extensions  # [py<310]
 
 test:
   requires:
