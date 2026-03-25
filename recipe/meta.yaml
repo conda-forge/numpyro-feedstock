@@ -1,5 +1,5 @@
 {% set name = "numpyro" %}
-{% set version = "0.20.0" %}
+{% set version = "0.20.1" %}
 
 package:
   name: numpyro
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3cebd0f313866eb0157e3153a9bf56f211020aa07f6a0104a4c36c483496f97b
+  sha256: 36fa0f81c8e095d2307c37346e9f8f8a5798f663ce8bd3823a372f5b1374ebeb
 
 build:
   noarch: python
