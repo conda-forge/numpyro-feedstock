@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  name: numpyro
+  version: "0.21.0"
+  python_min: "3.11"
+
+package:
+  name: numpyro
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: fc4a90a024a08840868d46b5f9bdc416dfa3ab76c61691036b44ac2b8a77ac77
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install .
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools >=61
+    - wheel
+  run:
+    - jax >=0.7.0
+    - jaxlib >=0.7.0
+    - multipledispatch
+    - numpy
+    - python >=${{ python_min }}
+    - tqdm
+
+tests:
+  - python:
+      imports:
+        - numpyro
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE.md
+  summary: Probabilistic programming with NumPy powered by JAX for autograd and JIT compilation to GPU/TPU/CPU.
+  homepage: https://github.com/pyro-ppl/numpyro
+  documentation: https://num.pyro.ai/en/stable/
+
+extra:
+  recipe-maintainers:
+    - fehiepsi
+    - freddyaboulton
+    - thewchan
