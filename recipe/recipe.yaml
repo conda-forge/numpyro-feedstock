@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: numpyro
   version: "0.22.0"
-  python_min: "3.11"
 
 package:
   name: numpyro
@@ -14,7 +13,7 @@ source:
   sha256: d428b688f7c6d1f9089b730c242a3817452609e3672bd62bbc1b02ce17f069bb
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install .
 
