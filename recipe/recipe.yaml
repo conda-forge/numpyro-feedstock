@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: numpyro
-  version: "0.21.0"
+  version: "0.22.0"
   python_min: "3.11"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: fc4a90a024a08840868d46b5f9bdc416dfa3ab76c61691036b44ac2b8a77ac77
+  sha256: d428b688f7c6d1f9089b730c242a3817452609e3672bd62bbc1b02ce17f069bb
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install .
 
